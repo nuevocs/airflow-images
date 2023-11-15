@@ -15,7 +15,7 @@ RUN python3 -m playwright install --with-deps
 
 USER airflow
 RUN pip install --user --upgrade pip
-COPY cdt-airflow/requirements.txt /requirements.txt
+COPY airflow-playwright/requirements.txt /requirements.txt
 RUN pip install --no-cache-dir --user -r /requirements.txt
 
 RUN playwright install
